@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://127.0.0.1:5500/swarnandhra/src/components/new1/index2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+<style>
+button{
+    height: 100px;
+    width: 100px;
+}
+#result{
+    height: 100px;
+    width: 410px;
+}
+</style></head>
+
+<body style="background-color: chocolate;">
+
+   <center> <h1>CALCULATOR</h1>
+    <input type="text" placeholder="0" id="result">
+    <table style="background-color: aqua;">
+        <tbody><tr style="background-color: blue;">
+            <td><button onclick="display(7)">7</button></td>
+            <td><button onclick="display(8)">8</button></td>
+            <td><button onclick="display(9)">9</button></td>
+            <td><button onclick="display('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display(4)">4</button></td>
+            <td><button onclick="display(5)">5</button></td>
+            <td><button onclick="display(6)">6</button></td>
+            <td><button onclick="display('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display(1)">1</button></td>
+            <td><button onclick="display(2)">2</button></td>
+            <td><button onclick="display(3)">3</button></td>
+            <td><button onclick="display('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display(0)">0</button></td>
+            <td><button onclick="display(AC)">AC</button></td>
+            <td><button onclick="display('=')">=</button></td>
+            <td><button onclick="display('/')">/</button></td>
+
+        </tr>
+
+        
+    </tbody></table>
+   </center>
+   <script>
+    let output=document.getElementById("result");
+    function display(num){
+        output.value+=num
+    }
+    function calculate(){
+        try{
+            output.value=eval(output.value);
+        }
+        catch(err)
+        {
+            alert("invalid");
+        }
+    }
+    function clr(){
+        output.value="";
+    }
+   </script>
+
+</body></html>
